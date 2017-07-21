@@ -1,11 +1,11 @@
 <?php
 
-namespace App\ContentTypes\Events\Controllers;
+namespace Baytek\Laravel\Content\Types\Events\Controllers;
 
-use App\ContentTypes\Events\Models\Event;
-use App\ContentTypes\Events\Models\Category;
-use App\ContentTypes\Events\Requests\EventRequest;
-use App\ContentTypes\Events\Scopes\ApprovedEventScope;
+use Baytek\Laravel\Content\Types\Events\Models\Event;
+use Baytek\Laravel\Content\Types\Events\Models\Category;
+use Baytek\Laravel\Content\Types\Events\Requests\EventRequest;
+use Baytek\Laravel\Content\Types\Events\Scopes\ApprovedEventScope;
 
 use Baytek\Laravel\Content\Controllers\ContentController;
 use Baytek\Laravel\Content\Events\ContentEvent;
@@ -20,7 +20,7 @@ class EventController extends ContentController
     /**
      * The model the Content Controller super class will use to access the event
      *
-     * @var App\ContentTypes\Events\Models\Event
+     * @var Baytek\Laravel\Content\Types\Events\Models\Event
      */
     protected $model = Event::class;
     protected $request = EventRequest::class;

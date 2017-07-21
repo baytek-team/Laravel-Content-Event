@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Discussion;
+namespace Baytek\Laravel\Content\Types\Event;
 
 use Baytek\Laravel\Content\ContentServiceProvider;
 use Baytek\Laravel\Content\Models\Content;
@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
-class DiscussionContentServiceProvider extends AuthServiceProvider
+class EventContentServiceProvider extends AuthServiceProvider
 {
     use Settable;
 
@@ -26,7 +26,7 @@ class DiscussionContentServiceProvider extends AuthServiceProvider
      * @var [type]
      */
     protected $policies = [
-        Discussion::class => Policies\DiscussionPolicy::class,
+        Event::class => Policies\EventPolicy::class,
     ];
 
     /**
@@ -34,7 +34,7 @@ class DiscussionContentServiceProvider extends AuthServiceProvider
      * @var Array
      */
     protected $commands = [
-        Commands\DiscussionInstaller::class,
+        Commands\EventInstaller::class,
     ];
 
     /**
@@ -42,7 +42,7 @@ class DiscussionContentServiceProvider extends AuthServiceProvider
      * @var Array
      */
     protected $settings = [
-        // 'discussion' => Settings\DiscussionSettings::class
+        // 'event' => Settings\EventSettings::class
     ];
 
     /**
@@ -58,7 +58,7 @@ class DiscussionContentServiceProvider extends AuthServiceProvider
         $this->registerSettings($this->settings);
 
         // Set the local load path for views
-        $this->loadViewsFrom(__DIR__.'/../views/discussion', 'discussion');
+        $this->loadViewsFrom(__DIR__.'/../views/event', 'event');
         $this->loadViewsFrom(__DIR__.'/../views/topic', 'topic');
         $this->loadViewsFrom(__DIR__.'/../views/response', 'response');
 
@@ -73,7 +73,7 @@ class DiscussionContentServiceProvider extends AuthServiceProvider
         ], 'views');
 
         $this->publishes([
-            __DIR__.'/../config/discussion.php' => config_path('discussion.php'),
+            __DIR__.'/../config/event.php' => config_path('event.php'),
         ], 'config');
 
         Broadcast::channel('content.{contentId}', function ($user, $contentId) {

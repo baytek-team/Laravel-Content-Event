@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Discussion;
+namespace Baytek\Laravel\Content\Types\Event;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    // protected $namespace = Baytek\Laravel\Content\Types\Discussion::class;
+    // protected $namespace = Baytek\Laravel\Content\Types\Event::class;
 
     /**
      * Define your route model bindings, pattern filters, etc.

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ContentTypes\Events\Requests;
+namespace Baytek\Laravel\Content\Types\Events\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

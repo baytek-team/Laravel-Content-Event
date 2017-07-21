@@ -1,10 +1,10 @@
 <?php
 
-namespace App\ContentTypes\Events\Controllers\Api;
+namespace Baytek\Laravel\Content\Types\Events\Controllers\Api;
 
-use App\ContentTypes\Events\Models\Event;
-use App\ContentTypes\Events\Scopes\EventScope;
-use App\ContentTypes\Events\Scopes\ApprovedEventScope;
+use Baytek\Laravel\Content\Types\Events\Models\Event;
+use Baytek\Laravel\Content\Types\Events\Scopes\EventScope;
+use Baytek\Laravel\Content\Types\Events\Scopes\ApprovedEventScope;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

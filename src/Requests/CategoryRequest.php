@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ContentTypes\Events\Requests;
+namespace Baytek\Laravel\Content\Types\Events\Requests;
 
 use App\Http\Requests\Request;
 use Baytek\Laravel\Content\Models\Content;
