@@ -1,0 +1,10 @@
+{
+    "name": "baytek/laravel-content-event",
+    "authors": [
+        {
+            "name": "Yvon Viger",
+            "email": "yvon@baytek.ca"
+        }
+    ],
+    "require": {}
+}
