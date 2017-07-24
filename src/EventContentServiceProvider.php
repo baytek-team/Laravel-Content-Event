@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Event;
+namespace Baytek\Laravel\Content\Types\Events;
 
 use Baytek\Laravel\Content\ContentServiceProvider;
 use Baytek\Laravel\Content\Models\Content;
@@ -59,7 +59,7 @@ class EventContentServiceProvider extends AuthServiceProvider
 
         // Set the local load path for views
         $this->loadViewsFrom(__DIR__.'/../views/event', 'event');
-        $this->loadViewsFrom(__DIR__.'/../views/topic', 'topic');
+        $this->loadViewsFrom(__DIR__.'/../views/category', 'category');
         $this->loadViewsFrom(__DIR__.'/../views/response', 'response');
 
         // Publish routes to the App
@@ -79,6 +79,9 @@ class EventContentServiceProvider extends AuthServiceProvider
         Broadcast::channel('content.{contentId}', function ($user, $contentId) {
             return true;//$user->id === Content::findOrNew($contentId)->user_id;
         });
+
+        //Register factories
+        $this->app->make('Illuminate\Database\Eloquent\Factory')->load(__DIR__ . '/../database/Factories');
 
     }
 

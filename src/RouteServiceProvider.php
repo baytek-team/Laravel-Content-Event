@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Event;
+namespace Baytek\Laravel\Content\Types\Events;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -71,7 +71,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         $routes = 'routes/api/event.php';
         if(file_exists(base_path($routes))){
-            Route::prefix('api/event')
+            Route::prefix('api/events')
                  ->middleware(['api', 'auth'])
                  ->namespace(Controllers\Api::class)
                  ->group(base_path($routes));

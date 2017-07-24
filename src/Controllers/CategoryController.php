@@ -10,7 +10,6 @@ use Baytek\Laravel\Content\Controllers\Controller;
 use Baytek\Laravel\Content\Models\Content;
 use Baytek\Laravel\Content\Models\ContentMeta;
 use Baytek\Laravel\Content\Models\ContentRelation;
-use Baytek\Laravel\Content\Types\Webpage\Webpage;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
