@@ -1,10 +1,24 @@
 {
     "name": "baytek/laravel-content-event",
+    "description": "Event Content Provider",
+    "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "Yvon Viger",
             "email": "yvon@baytek.ca"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Baytek\\Laravel\\Content\\Types\\Events\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.4",
+    },
+    "post-install-cmd": [
+        "php artisan install:event"
+    ],
+    "minimum-stability": "dev"
 }
