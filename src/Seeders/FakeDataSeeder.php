@@ -1,11 +1,11 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Seeders;
+namespace Baytek\Laravel\Content\Types\Event\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use Baytek\Laravel\Content\Types\Events\Models\Event;
-use Baytek\Laravel\Content\Types\Events\Models\Category;
+use Baytek\Laravel\Content\Types\Event\Models\Event;
+use Baytek\Laravel\Content\Types\Event\Models\Category;
 
 class FakeDataSeeder extends Seeder
 {

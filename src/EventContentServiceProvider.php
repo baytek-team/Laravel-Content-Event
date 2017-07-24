@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events;
+namespace Baytek\Laravel\Content\Types\Event;
 
 use Baytek\Laravel\Content\ContentServiceProvider;
 use Baytek\Laravel\Content\Models\Content;

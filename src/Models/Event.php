@@ -1,9 +1,9 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Models;
+namespace Baytek\Laravel\Content\Types\Event\Models;
 
-use Baytek\Laravel\Content\Types\Events\Scopes\EventScope;
-use Baytek\Laravel\Content\Types\Events\Scopes\ApprovedEventScope;
+use Baytek\Laravel\Content\Types\Event\Scopes\EventScope;
+use Baytek\Laravel\Content\Types\Event\Scopes\ApprovedEventScope;
 
 use Baytek\Laravel\Content\Models\Content;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Controllers;
+namespace Baytek\Laravel\Content\Types\Event\Controllers;
 
-use Baytek\Laravel\Content\Types\Events\Models\Category;
-use Baytek\Laravel\Content\Types\Events\Requests\CategoryRequest;
+use Baytek\Laravel\Content\Types\Event\Models\Category;
+use Baytek\Laravel\Content\Types\Event\Requests\CategoryRequest;
 
 use Baytek\Laravel\Content\Controllers\ContentController;
 use Baytek\Laravel\Content\Controllers\Controller;

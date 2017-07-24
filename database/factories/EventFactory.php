@@ -1,7 +1,7 @@
 <?php
 
-use Baytek\Laravel\Content\Types\Events\Models\Category;
-use Baytek\Laravel\Content\Types\Events\Models\Event;
+use Baytek\Laravel\Content\Types\Event\Models\Category;
+use Baytek\Laravel\Content\Types\Event\Models\Event;
 /**
  * Events Categories
  */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Models;
+namespace Baytek\Laravel\Content\Types\Event\Models;
 
 use Baytek\Laravel\Content\Models\Content;
-use Baytek\Laravel\Content\Types\Events\Models\Resource;
-use Baytek\Laravel\Content\Types\Events\Scopes\CategoryScope;
+use Baytek\Laravel\Content\Types\Event\Models\Resource;
+use Baytek\Laravel\Content\Types\Event\Scopes\CategoryScope;
 
 use Cache;
 

@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Baytek\\Laravel\\Content\\Types\\Events\\": "src/"
+            "Baytek\\Laravel\\Content\\Types\\Event\\": "src/"
         }
     },
     "require": {

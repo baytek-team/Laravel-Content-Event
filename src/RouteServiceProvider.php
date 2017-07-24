@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events;
+namespace Baytek\Laravel\Content\Types\Event;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;

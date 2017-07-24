@@ -1,5 +1,5 @@
 <?php
-namespace Baytek\Laravel\Content\Types\Events\Seeders;
+namespace Baytek\Laravel\Content\Types\Event\Seeders;
 
 use Baytek\Laravel\Content\Seeder;
 
@@ -9,7 +9,7 @@ class EventSeeder extends Seeder
         [
             'key' => 'event',
             'title' => 'Event',
-            'content' => 'Baytek\Laravel\Content\Types\Events\Models\Event',
+            'content' => 'Baytek\Laravel\Content\Types\Event\Models\Event',
             'relations' => [
                 ['parent-id', 'content-type']
             ]
@@ -17,7 +17,7 @@ class EventSeeder extends Seeder
         [
             'key' => 'event-category',
             'title' => 'Event Category',
-            'content' => 'Baytek\Laravel\Content\Types\Events\Models\Category',
+            'content' => 'Baytek\Laravel\Content\Types\Event\Models\Category',
             'relations' => [
                 ['parent-id', 'content-type'],
             ]

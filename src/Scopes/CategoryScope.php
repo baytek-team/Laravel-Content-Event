@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Scopes;
+namespace Baytek\Laravel\Content\Types\Event\Scopes;
 
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Model;

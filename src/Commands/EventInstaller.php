@@ -1,12 +1,12 @@
 <?php
-namespace Baytek\Laravel\Content\Types\Events\Commands;
+namespace Baytek\Laravel\Content\Types\Event\Commands;
 
 use Baytek\Laravel\Content\Models\Content;
 use Baytek\Laravel\Content\Commands\Installer;
-use Baytek\Laravel\Content\Types\Events\Seeders\EventSeeder;
-use Baytek\Laravel\Content\Types\Events\Seeders\FakeDataSeeder;
-use Baytek\Laravel\Content\Types\Events\Event;
-use Baytek\Laravel\Content\Types\Events\EventContentServiceProvider;
+use Baytek\Laravel\Content\Types\Event\Seeders\EventSeeder;
+use Baytek\Laravel\Content\Types\Event\Seeders\FakeDataSeeder;
+use Baytek\Laravel\Content\Types\Event\Event;
+use Baytek\Laravel\Content\Types\Event\EventContentServiceProvider;
 use Spatie\Permission\Models\Permission;
 
 use Artisan;

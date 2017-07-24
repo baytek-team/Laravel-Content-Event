@@ -1,6 +1,6 @@
 <?php
 
-namespace Baytek\Laravel\Content\Types\Events\Policies;
+namespace Baytek\Laravel\Content\Types\Event\Policies;
 
 use Baytek\Laravel\Content\Policies\GeneralPolicy;
 
