@@ -36,19 +36,6 @@ class CategoryController extends ContentController
 
     protected $redirectsKey = 'events.category';
 
-
-    /**
-     * [__construct description]
-     *
-     * @return  null
-     */
-    public function __construct()
-    {
-        $this->loadViewsFrom(resource_path().'/views', 'category');
-
-        parent::__construct();
-    }
-
     /**
      * Show the index of all content with content type 'webpage'
      *

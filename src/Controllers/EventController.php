@@ -42,18 +42,6 @@ class EventController extends ContentController
     protected $redirectsKey = 'event';
 
     /**
-     * [__construct description]
-     *
-     * @return  null
-     */
-    public function __construct()
-    {
-        $this->loadViewsFrom(resource_path().'/views', 'event');
-
-        parent::__construct();
-    }
-
-    /**
      * Show the index of all content with content type 'event'
      *
      * @return \Illuminate\Http\Response
