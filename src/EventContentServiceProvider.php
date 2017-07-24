@@ -68,7 +68,7 @@ class EventContentServiceProvider extends AuthServiceProvider
 
         // Set the path to publish assets for users to extend
         $this->publishes([
-            __DIR__.'/../views' => resource_path('views/vendor/event'),
+            __DIR__.'/../views' => resource_path('views/vendor'),
         ], 'views');
 
         $this->publishes([
