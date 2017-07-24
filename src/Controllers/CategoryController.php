@@ -6,17 +6,8 @@ use Baytek\Laravel\Content\Types\Event\Models\Category;
 use Baytek\Laravel\Content\Types\Event\Requests\CategoryRequest;
 
 use Baytek\Laravel\Content\Controllers\ContentController;
-use Baytek\Laravel\Content\Controllers\Controller;
 use Baytek\Laravel\Content\Models\Content;
-use Baytek\Laravel\Content\Models\ContentMeta;
-use Baytek\Laravel\Content\Models\ContentRelation;
-
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Http\Request;
-
-use View;
+use Baytek\Laravel\Content\Events\ContentEvent;
 
 class CategoryController extends ContentController
 {
@@ -121,6 +112,8 @@ class CategoryController extends ContentController
         $category = parent::contentStore($request);
         $category->saveRelation('parent-id', $request->parent_id);
         $category->onBit(Category::APPROVED)->save();
+
+        event(new ContentEvent($category));
 
         return redirect(route($this->redirectsKey.'.index', $category));
     }

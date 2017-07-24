@@ -8,7 +8,7 @@ use Baytek\Laravel\Content\Types\Event\Requests\EventRequest;
 use Baytek\Laravel\Content\Types\Event\Scopes\ApprovedEventScope;
 
 use Baytek\Laravel\Content\Controllers\ContentController;
-use Baytek\Laravel\Content\Event\ContentEvent;
+use Baytek\Laravel\Content\Events\ContentEvent;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
