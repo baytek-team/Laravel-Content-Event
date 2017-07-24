@@ -1,4 +1,4 @@
-@extends('admin.events.event.template')
+@extends('event::template')
 
 
 @section('content')
@@ -7,7 +7,7 @@
             <form action="{{route('event.store')}}" method="POST" class="ui form">
                 {{ csrf_field() }}
 
-                @include('admin.events.event.form')
+                @include('event::form')
                 <div class="ui hidden divider"></div>
                 <div class="ui hidden divider"></div>
 

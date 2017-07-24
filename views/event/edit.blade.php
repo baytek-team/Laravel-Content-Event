@@ -1,4 +1,4 @@
-@extends('admin.events.event.template')
+@extends('event::template')
 
 @section('content')
     <div id="registration" class="ui container">
@@ -7,7 +7,7 @@
             {{ csrf_field() }}
             {{ method_field('PUT') }}
 
-            @include('admin.events.event.form')
+            @include('event::form')
             {{-- <div class="field">
                 <div class="ui toggle checkbox">
                     <input type="checkbox" name="notify" tabindex="0" class="hidden">
