@@ -58,9 +58,8 @@ class EventContentServiceProvider extends AuthServiceProvider
         $this->registerSettings($this->settings);
 
         // Set the local load path for views
-        $this->loadViewsFrom(__DIR__.'/../views/event', 'event');
-        $this->loadViewsFrom(__DIR__.'/../views/event-category', 'event-category');
-        $this->loadViewsFrom(__DIR__.'/../views/response', 'response');
+        $this->loadViewsFrom(__DIR__.'/../views/event/event', 'event');
+        $this->loadViewsFrom(__DIR__.'/../views/event/category', 'event-category');
 
         // Publish routes to the App
         $this->publishes([
