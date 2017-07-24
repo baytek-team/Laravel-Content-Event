@@ -15,6 +15,7 @@ use DB;
 class EventInstaller extends Installer
 {
     public $name = 'Event';
+    protected $protected = ['Event', 'Event Category'];
     protected $provider = EventContentServiceProvider::class;
     protected $model = Event::class;
     protected $seeder = EventSeeder::class;
@@ -51,11 +52,13 @@ class EventInstaller extends Installer
 
     public function shouldProtect()
     {
-        foreach(['view', 'create', 'update', 'delete'] as $permission) {
+        foreach ($this->protected as $model) {
+            foreach(['view', 'create', 'update', 'delete'] as $permission) {
 
-            // If the permission exists in any form do not reseed.
-            if(Permission::where('name', title_case($permission.' '.$this->name))->exists()) {
-                return false;
+                // If the permission exists in any form do not reseed.
+                if(Permission::where('name', title_case($permission.' '.$model))->exists()) {
+                    return false;
+                }
             }
         }
 
