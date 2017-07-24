@@ -22,18 +22,19 @@
                     <td>{{ $category->title }}</td>
                     <td class="right aligned collapsing">
                         <div class="ui compact text menu">
-                            {{-- <a class="item" href="{{ route('events.category.events.index', $category->id) }}">
-                                <i class="file text icon"></i>
-                                {{ ___('Resources') }}
-                            </a> --}}
                             <a class="item" href="{{ route('events.category.edit', $category->id) }}">
                                 <i class="pencil icon"></i>
                                 {{ ___('Edit') }}
                             </a>
-                            <a href="{{ route('events.category.destroy', $category->id) }}" class="item">
-                                <i class="delete icon"></i>
-                                {{ ___('Delete') }}
-                            </a>
+                            @button(___('Delete'), [
+                                'method' => 'delete',
+                                'location' => 'events.category.destroy',
+                                'type' => 'route',
+                                'confirm' => 'Are you sure you want to delete this event category?</br>This cannot be undone.',
+                                'class' => 'item',
+                                'prepend' => '<i class="delete icon"></i>',
+                                'model' => $category,
+                            ])
                         </div>
                     </td>
                 </tr>
