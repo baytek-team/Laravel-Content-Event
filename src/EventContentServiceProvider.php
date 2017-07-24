@@ -26,7 +26,8 @@ class EventContentServiceProvider extends AuthServiceProvider
      * @var [type]
      */
     protected $policies = [
-        Event::class => Policies\EventPolicy::class,
+        Models\Event::class => Policies\EventPolicy::class,
+        Models\Category::class => Policies\CategoryPolicy::class,
     ];
 
     /**
