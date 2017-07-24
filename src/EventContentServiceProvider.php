@@ -26,7 +26,8 @@ class EventContentServiceProvider extends AuthServiceProvider
      * @var [type]
      */
     protected $policies = [
-        Event::class => Policies\EventPolicy::class,
+        Models\Event::class => Policies\EventPolicy::class,
+        Models\Category::class => Policies\CategoryPolicy::class,
     ];
 
     /**
@@ -60,7 +61,6 @@ class EventContentServiceProvider extends AuthServiceProvider
         // Set the local load path for views
         $this->loadViewsFrom(__DIR__.'/../views/event', 'event');
         $this->loadViewsFrom(__DIR__.'/../views/category', 'event-category');
-        $this->loadViewsFrom(__DIR__.'/../views/response', 'response');
 
         // Publish routes to the App
         $this->publishes([
