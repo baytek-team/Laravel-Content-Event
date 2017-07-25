@@ -24,6 +24,11 @@ class CategoryController extends ContentController
      */
     protected $viewPrefix = 'admin';
     /**
+     * Namespace from which to load the view
+     * @var string
+     */
+    protected $viewNamespace = 'events';
+    /**
      * List of views this content type uses
      * @var [type]
      */
