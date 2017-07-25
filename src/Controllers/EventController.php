@@ -148,6 +148,7 @@ class EventController extends ContentController
 
         $event = parent::contentStore($request);
         $event->saveRelation('category', $request->category);
+        $event->saveRelation('parent-id', content('content-type/event', false));
         $event->saveMetadata('event_date', (new Carbon($request->event_date))->toDateTimeString());
 
         $event->onBit(Event::APPROVED)->update();
