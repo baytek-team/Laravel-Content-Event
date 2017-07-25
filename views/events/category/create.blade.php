@@ -1,4 +1,4 @@
-@extends('event-category::template')
+@extends('events::category.template')
 
 @section('content')
 <div class="flex-center position-ref full-height">
@@ -7,7 +7,7 @@
             {{ csrf_field() }}
             <input type="hidden" id="parent_id" name="parent_id" value="{{ $parent->id }}">
 
-            @include('event-category::form')
+            @include('events::category.form')
 
             <div class="field actions">
 	            <a class="ui button" href="{{ route('events.category.index') }}">{{ ___('Cancel') }}</a>

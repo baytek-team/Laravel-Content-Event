@@ -1,5 +1,4 @@
-@extends('event::template')
-
+@extends('events::event.template')
 
 @section('content')
     <div class="flex-center position-ref full-height">
@@ -7,7 +6,7 @@
             <form action="{{route('event.store')}}" method="POST" class="ui form">
                 {{ csrf_field() }}
 
-                @include('event::form')
+                @include('events::event.form')
                 <div class="ui hidden divider"></div>
                 <div class="ui hidden divider"></div>
 

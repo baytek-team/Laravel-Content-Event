@@ -1,4 +1,4 @@
-@extends('event::template')
+@extends('events::event.template')
 
 @section('page.head.menu')
     <div class="ui secondary menu">

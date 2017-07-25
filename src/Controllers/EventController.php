@@ -25,18 +25,18 @@ class EventController extends ContentController
     protected $model = Event::class;
     protected $request = EventRequest::class;
 
-    protected $viewPrefix = 'admin/events';
+    protected $viewPrefix = 'admin';
 
     /**
      * List of views this content type uses
      * @var [type]
      */
     protected $views = [
-        'index' => 'index',
-        'create' => 'create',
-        'edit' => 'edit',
-        'show' => 'show',
-        'translate' => 'translate',
+        'index' => 'event.index',
+        'create' => 'event.create',
+        'edit' => 'event.edit',
+        'show' => 'event.show',
+        'translate' => 'event.translate',
     ];
 
     protected $redirectsKey = 'event';

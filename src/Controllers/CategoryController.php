@@ -22,16 +22,16 @@ class CategoryController extends ContentController
      * [$viewPrefix description]
      * @var string
      */
-    protected $viewPrefix = 'admin/events';
+    protected $viewPrefix = 'admin';
     /**
      * List of views this content type uses
      * @var [type]
      */
     protected $views = [
-        'index' => 'index',
-        'create' => 'create',
-        'edit' => 'edit',
-        'show' => 'index',
+        'index' => 'category.index',
+        'create' => 'category.create',
+        'edit' => 'category.edit',
+        'show' => 'category.index',
     ];
 
     protected $redirectsKey = 'events.category';

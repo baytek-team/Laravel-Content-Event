@@ -1,4 +1,4 @@
-@extends('event-category::template')
+@extends('events::category.template')
 
 @section('content')
 <div id="registration" class="ui container">
@@ -7,7 +7,8 @@
         {{ csrf_field() }}
         {{ method_field('PUT') }}
 
-        @include('event-category::form')
+        @include('events::category.form')
+
         <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
 
