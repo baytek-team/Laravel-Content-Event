@@ -59,7 +59,7 @@ class EventContentServiceProvider extends AuthServiceProvider
         $this->registerSettings($this->settings);
 
         // Set the local load path for views
-        $this->loadViewsFrom(__DIR__.'/../views/events', 'events');
+        $this->loadViewsFrom(__DIR__.'/../views', 'events');
 
         // Publish routes to the App
         $this->publishes([
@@ -68,7 +68,7 @@ class EventContentServiceProvider extends AuthServiceProvider
 
         // Set the path to publish assets for users to extend
         $this->publishes([
-            __DIR__.'/../views' => resource_path('views/vendor'),
+            __DIR__.'/../views' => resource_path('views/vendor/events'),
         ], 'views');
 
         $this->publishes([
