@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['as' => 'events.'], function () {
+Route::group(['as' => 'event.'], function () {
     Route::resource('category', CategoryController::class);
 });
 

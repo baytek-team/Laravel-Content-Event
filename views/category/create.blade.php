@@ -10,7 +10,7 @@
             @include('events::category.form')
 
             <div class="field actions">
-	            <a class="ui button" href="{{ route('events.category.index') }}">{{ ___('Cancel') }}</a>
+	            <a class="ui button" href="{{ route('event.category.index') }}">{{ ___('Cancel') }}</a>
 	            <button type="submit" class="ui right floated primary button">
 	            	{{ ___('Create Content') }}
             	</button>
