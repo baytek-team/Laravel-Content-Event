@@ -6,17 +6,13 @@ use Baytek\Laravel\Content\Types\Event\Models\Event;
 use Baytek\Laravel\Content\Types\Event\Scopes\EventScope;
 use Baytek\Laravel\Content\Types\Event\Scopes\ApprovedEventScope;
 
-use App\Http\Controllers\Controller;
+use Baytek\Laravel\Content\Controllers\ApiController;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
 
-class EventController extends Controller
+class EventController extends ApiController
 {
-	public function __construct()
-	{
-	}
-
 	public function all()
     {
     	return Event::withoutGlobalScope(ApprovedEventScope::class)->get();
