@@ -22,6 +22,30 @@ class EventSeeder extends Seeder
                 ['parent-id', 'content-type'],
             ]
         ],
+        [
+            'key' => 'event-menu',
+            'title' => 'Event Navigation Menu',
+            'content' => '',
+            'relations' => [
+                ['content-type', 'menu'],
+                ['parent-id', 'admin-menu'],
+            ]
+        ],
+        [
+            'key' => 'event-index',
+            'title' => 'Events',
+            'content' => 'event.index',
+            'meta' => [
+                'type' => 'route',
+                'class' => 'item',
+                'append' => '</span>',
+                'prepend' => '<i class="calendar left icon"></i><span class="collapseable-text">',
+            ],
+            'relations' => [
+                ['content-type', 'menu-item'],
+                ['parent-id', 'event-menu'],
+            ]
+        ]
     ];
 
     /**

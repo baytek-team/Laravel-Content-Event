@@ -21,7 +21,7 @@
     <a class="item @if($filter && $filter == 'past') active @endif" href="{{ route('event.past') }}">{{ ___('Past') }}</a>
     <a class="item @if($filter && $filter == 'featured') active @endif" href="{{ route('event.featured') }}">{{ ___('Featured') }}</a>
 </div>
-<table class="ui selectable table">
+<table class="ui selectable very basic table">
     <thead>
         <tr>
             <th class="nine wide">{{ ___('Event Title') }}</th>
