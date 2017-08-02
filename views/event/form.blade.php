@@ -37,13 +37,7 @@
     </div>
 </div>
 
-@section('head')
-<link rel="stylesheet" type="text/css" href="/css/daterangepicker.min.css">
-{{-- <script type="text/javascript" src="/js/trix.js"></script> --}}
-@endsection
-
 @section('scripts')
-<script type="text/javascript" src="/js/daterangepicker.min.js"></script>
 <script>
     window.jQuery('.ui.daterangepicker').daterangepicker({
         singleDatePicker: true,

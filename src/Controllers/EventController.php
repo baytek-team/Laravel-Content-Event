@@ -48,19 +48,6 @@ class EventController extends ContentController
      */
     public function index($topicID = null)
     {
-        // if(!is_null($topicID)) {
-        //     $this->viewData['index'] = [
-        //         'discussions' => Discussion::approved()->childrenOfType(Event::find($topicID)->key, 'discussion')->paginate(),
-        //         'filter' => 'active',
-        //     ];
-        // }
-        // else {
-        //     $this->viewData['index'] = [
-        //         'discussions' => Discussion::approved()->ofType('discussion')->paginate(),
-        //         'filter' => 'active',
-        //     ];
-        // }
-
         $this->viewData['index'] = [
             'events' => Event::paginate(),
             'filter' => 'all',
@@ -162,6 +149,21 @@ class EventController extends ContentController
         event(new ContentEvent($event));
 
         return redirect(route('event.edit', $event->id));
+    }
+
+    /**
+     * Show the form for creating a new webpage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Event $event)
+    {
+        $this->viewData['show'] = [
+            'event' => $event,
+            'categories' => Category::all(),
+        ];
+
+        return parent::contentShow($event);
     }
 
     /**

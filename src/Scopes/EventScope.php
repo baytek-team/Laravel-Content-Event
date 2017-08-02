@@ -19,6 +19,6 @@ class EventScope implements Scope
     {
         $builder->ofType('event')
             ->withAll()
-            ->orderByMeta('event_date', 'desc');
+            ->orderByMeta('event_date', 'asc');
     }
 }
