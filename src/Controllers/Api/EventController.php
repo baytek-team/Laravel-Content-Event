@@ -51,7 +51,6 @@ class EventController extends ApiController
     public function dashboard()
     {
         return Event::upcoming()
-            ->featured()
             ->withoutGlobalScope(EventScope::class)
             ->ofType('event')
             ->withContents()
