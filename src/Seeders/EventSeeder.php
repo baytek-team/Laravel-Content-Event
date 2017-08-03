@@ -34,7 +34,7 @@ class EventSeeder extends Seeder
         [
             'key' => 'event-index',
             'title' => 'Events',
-            'content' => 'event.index',
+            'content' => 'event.upcoming',
             'meta' => [
                 'type' => 'route',
                 'class' => 'item',
