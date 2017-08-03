@@ -12,7 +12,7 @@
 @extends('events::event.template')
 
 @section('page.head.menu')
-    <div class="ui stackable fluid secondary menu">
+    <div class="ui stackable secondary contextual menu">
         <div class="header item">
             <i class="filter icon"></i>
             {{ ___('Filter By') }}
@@ -22,13 +22,15 @@
         <a class="item @if($filter && $filter == 'past') active @endif" href="{{ route('event.past') }}">{{ ___('Past') }}</a>
         <a class="item @if($filter && $filter == 'featured') active @endif" href="{{ route('event.featured') }}">{{ ___('Featured') }}</a>
         @if(Auth::user()->can('Create Event'))
-            <a class="ui item button" href="{{ route('event.create') }}">
-                <i class="eye icon"></i>{{ ___('View Categories') }}
-            </a>
-
-            <a class="ui item primary button" href="{{ route('event.create') }}">
-                <i class="add icon"></i>{{ ___('Add Event') }}
-            </a>
+            <div class="item">
+                <a class="ui button" href="{{ route('event.category.index') }}">
+                    <i class="calendar icon"></i>{{ ___('Event Categories') }}
+                </a>
+                &nbsp;
+                <a class="ui primary button" href="{{ route('event.create') }}">
+                    <i class="add icon"></i>{{ ___('Add Event') }}
+                </a>
+            </div>
         @endif
     </div>
 @endsection
