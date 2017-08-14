@@ -49,7 +49,7 @@
             {{ ucfirst($fuzzyClass) }}
         </div>
 
-        <div class="ui segment">
+        <div class="ui segment simple padded">
             <div class="ui stretched stackable grid">
                 <div class="center aligned two wide column date {{$fuzzyClass}}">
                     <div class="ui grid">
