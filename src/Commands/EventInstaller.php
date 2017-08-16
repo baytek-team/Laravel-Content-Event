@@ -47,7 +47,7 @@ class EventInstaller extends Installer
             'event',
         ];
 
-        return Content::whereIn('key', $relevantRecords)->count() === 0;
+        return Content::whereIn('contents.key', $relevantRecords)->count() === 0;
     }
 
     public function shouldProtect()
