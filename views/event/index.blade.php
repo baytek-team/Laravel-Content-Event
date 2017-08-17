@@ -93,7 +93,14 @@
             </div>
         </div>
     @empty
-        <div class="ui middle aligned padded grid">
+        <style>
+        .no-result {
+            flex-direction: column;
+            /*min-height: calc(100vh - 300px);*/
+        }
+        </style>
+
+        <div class="ui middle aligned padded grid no-result">
             <div class="column">
                 <div class="ui center aligned padded grid">
                     <div class="column">
