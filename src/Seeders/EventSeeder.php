@@ -40,6 +40,7 @@ class EventSeeder extends Seeder
                 'class' => 'item',
                 'append' => '</span>',
                 'prepend' => '<i class="calendar left icon"></i><span class="collapseable-text">',
+                'permission' => 'View Event'
             ],
             'relations' => [
                 ['content-type', 'menu-item'],

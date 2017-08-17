@@ -21,17 +21,20 @@
         <a class="item @if($filter && $filter == 'upcoming') active @endif" href="{{ route('event.upcoming') }}">{{ ___('Upcoming') }}</a>
         <a class="item @if($filter && $filter == 'past') active @endif" href="{{ route('event.past') }}">{{ ___('Past') }}</a>
         <a class="item @if($filter && $filter == 'featured') active @endif" href="{{ route('event.featured') }}">{{ ___('Featured') }}</a>
-        @if(Auth::user()->can('Create Event'))
-            <div class="item">
-                <a class="ui button" href="{{ route('event.category.index') }}">
-                    <i class="calendar icon"></i>{{ ___('Event Categories') }}
-                </a>
-                &nbsp;
-                <a class="ui primary button" href="{{ route('event.create') }}">
-                    <i class="add icon"></i>{{ ___('Add Event') }}
-                </a>
-            </div>
-        @endif
+        
+        <div class="item">
+            @can('View Event Category')
+            <a class="ui button" href="{{ route('event.category.index') }}">
+                <i class="calendar icon"></i>{{ ___('Event Categories') }}
+            </a>
+            @endcan
+            &nbsp;
+            @can('Create Event')
+            <a class="ui primary button" href="{{ route('event.create') }}">
+                <i class="add icon"></i>{{ ___('Add Event') }}
+            </a>
+            @endcan
+        </div>
     </div>
 @endsection
 
@@ -70,9 +73,12 @@
                             {!! $event->content !!}
                             </div>
                             <div class="two wide right aligned column">
+                                @can('Update Event')
                                 <a class="ui icon basic button" href="{{ route('event.edit', $event->id) }}">
                                     <i class="pencil icon"></i>
                                 </a>
+                                @endcan
+                                @can('Delete Event')
                                 @button(___(''), [
                                     'method'   => 'delete',
                                     'location' => 'event.destroy',
@@ -82,6 +88,7 @@
                                     'prepend'  => '<i class="delete icon"></i>',
                                     'model'    => $event,
                                 ])
+                                @endcan
                             </div>
                         </div>
 

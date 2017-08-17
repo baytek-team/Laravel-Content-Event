@@ -25,10 +25,13 @@
                 <h1>{{ str_limit($event->title, 100) }}</h1>
                 {!! $event->content !!}
 
+                @can('Update Event')
                 <a class="item" href="{{ route('event.edit', $event->id) }}">
                     <i class="pencil icon"></i>
                     {{ ___('Edit') }}
                 </a>
+                @endcan
+                @can('Delete Event')
                 @button(___('Delete'), [
                     'method' => 'delete',
                     'location' => 'event.destroy',
@@ -38,6 +41,7 @@
                     'prepend' => '<i class="delete icon"></i>',
                     'model' => $event,
                 ])
+                @endcan
         </div>
     </div>
 

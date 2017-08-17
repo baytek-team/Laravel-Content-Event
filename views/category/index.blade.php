@@ -3,9 +3,11 @@
 @section('page.head.menu')
     <div class="ui stackable secondary contextual menu">
         <div class="item">
+            @can('Create Event Category')
             <a class="ui primary button" href="{{ route('event.category.create') }}">
                 <i class="add icon"></i>{{ ___('Add Category') }}
             </a>
+            @endcan
         </div>
     </div>
 @endsection
@@ -26,10 +28,13 @@
                         <td>{{ $category->title }}</td>
                         <td class="right aligned collapsing">
                             <div class="ui compact text menu">
+                                @can('Update Event Category')
                                 <a class="item" href="{{ route('event.category.edit', $category->id) }}">
                                     <i class="pencil icon"></i>
                                     {{ ___('Edit') }}
                                 </a>
+                                @endcan
+                                @can('Delete Event Category')
                                 @button(___('Delete'), [
                                     'method' => 'delete',
                                     'location' => 'event.category.destroy',
@@ -39,6 +44,7 @@
                                     'prepend' => '<i class="delete icon"></i>',
                                     'model' => $category,
                                 ])
+                                @endcan
                             </div>
                         </td>
                     </tr>
