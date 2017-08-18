@@ -40,7 +40,7 @@
                                     'location' => 'event.category.destroy',
                                     'type' => 'route',
                                     'confirm' => 'Are you sure you want to delete this event category?</br>This cannot be undone.',
-                                    'class' => 'item',
+                                    'class' => 'item action',
                                     'prepend' => '<i class="delete icon"></i>',
                                     'model' => $category,
                                 ])
