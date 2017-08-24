@@ -75,7 +75,7 @@ class Event extends Content
      */
     public function scopeFeatured($query)
     {
-        return $query->withStatus('contents', self::FEATURED);
+        return $query->withStatus(self::FEATURED);
     }
 
     /**
@@ -98,7 +98,7 @@ class Event extends Content
      */
     public function scopeDeleted($query)
     {
-        return $query->withStatus('contents', Event::DELETED);
+        return $query->withStatus(Event::DELETED);
     }
 
     public function categoryID()
