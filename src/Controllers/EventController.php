@@ -109,7 +109,7 @@ class EventController extends ContentController
     public function create()
     {
         $this->viewData['create'] = [
-            'categories' => Category::all(),
+            'categories' => Category::approved()->get(),
         ];
 
         return parent::contentCreate();
@@ -160,7 +160,7 @@ class EventController extends ContentController
     {
         $this->viewData['show'] = [
             'event' => $event,
-            'categories' => Category::all(),
+            'categories' => Category::approved()->get(),
         ];
 
         return parent::contentShow($event);
@@ -214,7 +214,7 @@ class EventController extends ContentController
 
         $this->viewData['edit'] = [
             'category' => $event->categoryID(),
-            'categories' => Category::all(),
+            'categories' => Category::approved()->get(),
             'featured' => $event->hasStatus(Event::FEATURED),
         ];
 

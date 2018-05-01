@@ -51,6 +51,7 @@ class CategoryController extends ContentController
         $this->viewData['index'] = [
             'categories' => Category::withoutGlobalScopes()
                 ->childrenOf('event-category')
+                ->approved()
                 ->orderBy('title', 'asc')
                 ->paginate(),
         ];

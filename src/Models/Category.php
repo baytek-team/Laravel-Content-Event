@@ -38,4 +38,15 @@ class Category extends Content
 
         parent::boot();
     }
+
+    /**
+     * Scope a query to only include deleted members.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeApproved($query)
+    {
+        return $query->withStatus(self::APPROVED);
+    }
 }
