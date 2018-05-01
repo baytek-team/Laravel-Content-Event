@@ -235,6 +235,8 @@ class EventController extends ContentController
         //ContentEvent required here, otherwise the parent id isn't properly accessible
         event(new ContentEvent($event));
 
+        flash('Event Removed')->success();
+
         return back(); //so we stay on the same filter
 
         // return redirect(route('event.index'));

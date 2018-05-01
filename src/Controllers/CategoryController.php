@@ -131,4 +131,22 @@ class CategoryController extends ContentController
         return parent::contentEdit($id);
     }
 
+    /**
+     * Delete an event category
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $event = $this->bound($id);
+
+        $event->offBit(Category::APPROVED)->onBit(Category::DELETED)->update();
+
+        //ContentEvent required here, otherwise the parent id isn't properly accessible
+        event(new ContentEvent($event));
+
+        flash('Category Removed')->success();
+
+        return back(); //so we stay on the same filter
+    }
 }
