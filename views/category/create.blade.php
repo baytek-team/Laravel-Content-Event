@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <form action="{{route('events.category.store')}}" method="POST" class="ui form">
+        <form action="{{route('event.category.store')}}" method="POST" class="ui form">
             {{ csrf_field() }}
             <input type="hidden" id="parent_id" name="parent_id" value="{{ $parent->id }}">
 
