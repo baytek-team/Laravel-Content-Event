@@ -39,7 +39,7 @@ class CategoryController extends ContentController
         'show' => 'category.index',
     ];
 
-    protected $redirectsKey = 'events.category';
+    protected $redirectsKey = 'event.category';
 
     /**
      * Show the index of all content with content type 'webpage'
